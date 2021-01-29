@@ -1,0 +1,113 @@
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => General
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Sets how many lines of history VIM has to remember
+set history=500
+
+" Set utf8 as standard encoding and en_US as the standard language
+set encoding=utf8 
+
+" No Vi support, we are on Vim!
+set nocompatible
+
+filetype plugin on
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""" 
+"                     VIM USER INTERFACE                         "
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""" 
+
+" Enable relative numbers in VIM (easier to move around the file)
+set number relativenumber
+
+" Enable syntax highlighting
+syntax on   
+
+" Makes search act like search in modern browsers
+set incsearch 
+
+" Highlight search results
+set hlsearch
+
+" When searching try to be smart about cases
+set smartcase
+
+" Ignore case when searching
+set ignorecase
+
+"Always show current position
+set ruler
+
+" Set 7 lines to the cursor - when moving vertically using j/k
+set so=7
+
+" Turn on the Wild menu, necessary for the :find command
+set wildmenu
+
+" Ignore compiled files
+set wildignore=*.o,*~,*.pyc
+if has("win16") || has("win32")
+    set wildignore+=.git\*,.hg\*,.svn\*
+else
+    set wildignore+=*/.git/*,*/.hg/*,*/.svn/*,*/.DS_Store
+endif
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => Files, backups and undo
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Turn backup off, since most stuff is in SVN, git etc. anyway...
+set nobackup
+set nowb
+set noswapfile
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => Text, tab and indent related
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Use spaces instead of tabs
+set expandtab
+
+" Be smart when using tabs ;)
+set smarttab
+
+" 1 tab == 4 spaces
+set shiftwidth=4
+set tabstop=4
+
+" Linebreak on 500 characters
+set lbr
+set tw=500
+
+set ai "Auto indent
+set si "Smart indent
+set wrap "Wrap lines
+
+""""""""""""""""""""""""""""""
+" => Visual mode related
+""""""""""""""""""""""""""""""
+" Visual mode pressing * or # searches for the current selection
+" Super useful! From an idea by Michael Naumann
+
+vnoremap <silent> * :<C-u>call VisualSelection('', '')<CR>/<C-R>=@/<CR><CR>
+vnoremap <silent> # :<C-u>call VisualSelection('', '')<CR>?<C-R>=@/<CR><CR>
+
+
+""""""""""""""""""""""""""""""
+" => Status line
+""""""""""""""""""""""""""""""
+" Always show the status line
+set laststatus=2
+
+
+""""""""""""""""""""""""""""""
+" => Re-Mapping
+""""""""""""""""""""""""""""""
+" Enforcing Purity (disable arrow keys)
+map <Up> <Nop>
+map <Down> <Nop>
+map <Left> <Nop>
+map <Right> <Nop>
+
+" Remap jj to be the escape key (since in English and Spanish the jj combo isn't really used...)
+imap jj <Esc>
+
+" Remap the tab key to be the first non blanc character
+nnoremap <Tab> <^>"

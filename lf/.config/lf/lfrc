@@ -1,0 +1,105 @@
+# Basic Settings
+set preview true
+set hidden true
+set color256 true
+set drawbox true
+set icons true
+set ignorecase true
+set relativenumber true
+
+# Custom Functions
+cmd open ${{
+    case $(file --mime-type "$f" -bL) in
+        text/*|application/json) $EDITOR "$f";;
+        video/*|image/*/application/pdf) xdg-open "$f" & disown;;
+        *) xdg-open "$f" ;;
+    esac
+}}
+
+cmd mkdir ${{
+  printf "Directory Name: "
+  read ans
+  mkdir $ans
+}}
+
+cmd mkfile ${{
+  printf "File Name: "
+  read ans
+  $EDITOR $ans
+}}
+
+cmd chmod ${{
+  printf "Mode Bits: "
+  read ans
+
+  for file in "$fx"
+  do
+    chmod $ans $file
+  done
+}}
+
+cmd sudomkfile ${{
+  printf "File Name: "
+  read ans
+  sudo $EDITOR $ans
+}}
+
+# Archive bindings
+cmd unarchive ${{
+  case "$f" in
+      *.zip) unzip "$f" ;;
+      *.tar.gz) tar -xzvf "$f" ;;
+      *.tar.bz2) tar -xjvf "$f" ;;
+      *.tar) tar -xvf "$f" ;;
+      *) echo "Unsupported format" ;;
+  esac
+}}
+
+cmd zip %zip -r "$f" "$f"
+cmd tar %tar cvf "$f.tar" "$f"
+cmd targz %tar cvzf "$f.tar.gz" "$f"
+cmd tarbz2 %tar cjvf "$f.tar.bz2" "$f"
+
+# Bindings
+# Remove some defaults
+map m
+map o
+map n
+map "'"
+map '"'
+map d
+map c
+map f
+
+# File Openers
+map e $$EDITOR 
+
+# Archive Mappings
+map au unarchive
+
+# Basic Functions (Vim like)
+map . set hidden!
+map x delete
+map p paste
+map dd cut
+map yy copy
+map <enter> open
+map r rename
+
+map mf mkfile
+map mr sudomkfile
+map md mkdir
+map ms $mkscript
+map ch chmod
+map H top
+map L bottom
+map R reload
+map C clear
+map U unselect
+
+# Movement
+map gtr cd ~/.local/share/Trash/files
+map gv cd ~/Videos
+map gp cd ~/Pictures
+map gd cd ~/Downloads
+map gc cd ~/dotfiles

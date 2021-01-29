@@ -1,0 +1,38 @@
+#!/bin/sh
+
+# Colorize commands when possible.
+alias \
+    cp="cp -iv" \
+	mv="mv -iv" \
+	rm="rm -vI" \
+	ls="ls -hN --color=auto --group-directories-first" \
+	grep="grep --color=auto" \
+	diff="diff --color=auto" \
+	ccat="highlight --out-format=ansi"
+
+
+# Git aliases
+alias \
+    ga="git add" \
+    gcm="git commit -m" \
+    gp="git push" \
+    gaa="git add ." \
+    gs="git status" \
+    gd="git diff" \
+    gl="git log" \
+    gb="git branch" \
+    gcm="git commit -m"
+
+# Change bad habits
+alias \
+    vim="nvim"
+
+# system aliases
+alias \
+    suspend="systemctl suspend"
+
+# Change bad habits
+alias \
+    cheat="curl cht.sh/"
+
+
