@@ -1,0 +1,15 @@
+#!/bin/sh
+# Preview script built for use fzf
+
+case "$1" in
+    *.png | *.jpg | *.jpeg) sxiv "$1";;
+    *.mkv | *.mp4 | *.m4v) mpv "$1";;
+    *.pdf) zathura "$1";;
+    *.zip) zipinfo "$1";;
+    *.tar.gz) tar -ztvf "$1";;
+    *.tar.bz2) tar -jtvf "$1";;
+    *.tar) tar -tvf "$1";;
+    *.7z) 7z l "$1";;
+    *) $EDITOR "$1";;
+esac
+
