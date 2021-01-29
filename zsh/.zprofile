@@ -18,7 +18,8 @@ CLASSPATH=.:/home/pablito/projects/java/libraries/acm.jar
 export CLASSPATH
 export JAVA_HOME=/usr/lib/jvm/java-14-openjdk
 export PATH=$PATH:$JAVA_HOME/bin
-export PATH=$PATH:~/scripts
+# add scripts to the path
+export PATH="$PATH:${$(find ~/.local/bin -type d -printf %p:)%%:}"
 
 # Fix for dwm java apps 
 export _JAVA_AWT_WM_NONREPARENTING=1
