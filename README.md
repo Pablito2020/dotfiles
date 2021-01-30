@@ -10,6 +10,21 @@ Because I use a laptop with wayland and a pc with xorg, so having all the config
 
 The solution for this has been to create a repo for the wayland apps and another for the xorg ones. So you can keep the two separately and use this repo in common.
 
+### How to install this configuration?
+This repo uses the [gnu stow](https://www.gnu.org/software/stow/) as a dependency (yeah, I know that an script that does the symlink would do the job, but working with stow is easier).
+
+For arch linux based distros, stow is in the official repos:
+
+        $ sudo pacman -S stow
+
+Once you have stow installed, clone this repo and execute stow
+
+        $ git clone https://github.com/Pablito2020/dotfiles
+        
+        $ cd dotfiles
+        
+        $ rm README.md && stow -vSt ~ * 
+
 ### Applications configured
 
      * alacritty
