@@ -15,6 +15,7 @@ call plug#begin('~/.vim/autoload/')
     Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
     Plug 'junegunn/fzf.vim'
     Plug 'ap/vim-css-color'
+    Plug 'vimwiki/vimwiki'
     " Not really necessary, just for entertainment/to improve
     Plug 'ThePrimeagen/vim-be-good', {'do': './install.sh'}
 call plug#end()
