@@ -25,7 +25,8 @@ alias \
 
 # Change bad habits
 alias \
-    vim="nvim"
+    vim="nvim" \
+    sudo="doas"
 
 # system aliases
 alias \
