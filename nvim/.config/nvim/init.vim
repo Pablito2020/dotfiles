@@ -12,8 +12,10 @@ source ~/.config/nvim/key_mapings.vim
 source ~/.config/nvim/plugins.vim
 source ~/.config/nvim/plugins/colorscheme.vim
 source ~/.config/nvim/plugins/nerdtree.vim
-source ~/.config/nvim/plugins/fzf.vim
 " Completion
 source ~/.config/nvim/plugins/lsp.vim
 luafile ~/.config/nvim/plugins/compe-config.lua
 luafile ~/.config/nvim/plugins/languages-completion.lua
+" telescope
+source ~/.config/nvim/plugins/telescope-remaps.vim
+luafile ~/.config/nvim/plugins/telescope.lua
