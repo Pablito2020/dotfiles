@@ -4,7 +4,8 @@
 
 call plug#begin('~/.vim/autoload/')
     " Syntax
-    Plug 'neoclide/coc.nvim', {'branch': 'release'}
+    Plug 'neovim/nvim-lspconfig'
+    Plug 'hrsh7th/nvim-compe'
     Plug 'lervag/vimtex'
     Plug 'tpope/vim-commentary'
     " Colorscheme
@@ -16,7 +17,5 @@ call plug#begin('~/.vim/autoload/')
     Plug 'junegunn/fzf.vim'
     Plug 'ap/vim-css-color'
     Plug 'vimwiki/vimwiki'
-    " Not really necessary, just for entertainment/to improve
-    Plug 'ThePrimeagen/vim-be-good', {'do': './install.sh'}
 call plug#end()
 

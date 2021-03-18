@@ -13,5 +13,7 @@ source ~/.config/nvim/plugins.vim
 source ~/.config/nvim/plugins/colorscheme.vim
 source ~/.config/nvim/plugins/nerdtree.vim
 source ~/.config/nvim/plugins/fzf.vim
-source ~/.config/nvim/plugins/vimbegood.vim
-source ~/.config/nvim/plugins/conquer_of_completion.vim
+" Completion
+source ~/.config/nvim/plugins/lsp.vim
+luafile ~/.config/nvim/plugins/compe-config.lua
+luafile ~/.config/nvim/plugins/languages-completion.lua
