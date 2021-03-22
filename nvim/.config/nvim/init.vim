@@ -11,6 +11,7 @@ source ~/.config/nvim/key_mapings.vim
 
 source ~/.config/nvim/plugins.vim
 source ~/.config/nvim/plugins/colorscheme.vim
+luafile ~/.config/nvim/plugins/treesitter.lua
 source ~/.config/nvim/plugins/nerdtree.vim
 " Completion
 source ~/.config/nvim/plugins/lsp.vim
