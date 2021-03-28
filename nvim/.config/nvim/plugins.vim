@@ -12,7 +12,6 @@ call plug#begin('~/.vim/autoload/')
     Plug 'nvim-telescope/telescope.nvim'
     Plug 'nvim-telescope/telescope-fzy-native.nvim'
     " extra 
-    Plug 'lervag/vimtex'
     Plug 'tpope/vim-commentary'
     " Colorscheme
     Plug 'gruvbox-community/gruvbox'
