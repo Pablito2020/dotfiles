@@ -10,3 +10,4 @@ colorscheme gruvbox
 set background=dark
 " powerline emoji suport!
 let g:airline_powerline_fonts = 1
+highlight Normal guibg=None
