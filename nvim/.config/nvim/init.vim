@@ -10,8 +10,10 @@ source ~/.config/nvim/plugins.vim
 " colorscheme
 source ~/.config/nvim/plugins/colorscheme.vim
 luafile ~/.config/nvim/plugins/bar.lua
+" additions
 luafile ~/.config/nvim/plugins/treesitter.lua
 luafile ~/.config/nvim/plugins/nvim-tree.lua
+luafile ~/.config/nvim/plugins/git.lua
 " language server protocol
 luafile ~/.config/nvim/plugins/compe-config.lua
 luafile ~/.config/nvim/plugins/lsp.lua
