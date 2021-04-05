@@ -4,19 +4,16 @@
 "  |_| |_|\_/ |_|_| |_| |_|  \___\___/|_| |_|_| |_|\__, |
 "                                                  |___/ 
 
-source ~/.config/nvim/basic_interface.vim
-source ~/.config/nvim/file_backups.vim
-source ~/.config/nvim/tabs_and_indents.vim
-source ~/.config/nvim/key_mapings.vim
-
+source ~/.config/nvim/sets.vim
 source ~/.config/nvim/plugins.vim
+
+" colorscheme
 source ~/.config/nvim/plugins/colorscheme.vim
+luafile ~/.config/nvim/plugins/bar.lua
 luafile ~/.config/nvim/plugins/treesitter.lua
-source ~/.config/nvim/plugins/nerdtree.vim
-" Completion
-source ~/.config/nvim/plugins/lsp.vim
+luafile ~/.config/nvim/plugins/nvim-tree.lua
+" language server protocol
 luafile ~/.config/nvim/plugins/compe-config.lua
-luafile ~/.config/nvim/plugins/languages-completion.lua
-" telescope
-source ~/.config/nvim/plugins/telescope-remaps.vim
+luafile ~/.config/nvim/plugins/lsp.lua
+" telescope (fuzzy file finder)
 luafile ~/.config/nvim/plugins/telescope.lua

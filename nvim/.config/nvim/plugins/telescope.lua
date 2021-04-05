@@ -17,12 +17,11 @@ require('telescope').setup {
     }
 }
 
-local M = {}
-M.searh_dotfiles = function()
-    require("telescope.builtin").find_files({
-        prompt_title = "<dotfiles>",
-        cwd = "~/.dotfiles/",
-    })
-end
+-- remaps!
+local opt = {noremap = true, silent = true}
+vim.g.mapleader = " "
+vim.api.nvim_set_keymap("n", "<Leader>pf", [[<Cmd>lua require('telescope.builtin').find_files()<CR>]], opt)
+vim.api.nvim_set_keymap("n", "<Leader>pb", [[<Cmd>lua require('telescope.builtin').find_buffer()<CR>]], opt)
+vim.api.nvim_set_keymap("n", "<Leader>gf", [[<Cmd>lua require('telescope.builtin').git_files()<CR>]], opt)
 
 require('telescope').load_extension('fzy_native')

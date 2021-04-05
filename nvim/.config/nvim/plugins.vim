@@ -14,13 +14,13 @@ call plug#begin('~/.vim/autoload/')
     " extra 
     Plug 'tpope/vim-commentary'
     " Colorscheme
-    Plug 'gruvbox-community/gruvbox'
-    Plug 'joshdick/onedark.vim'
-    Plug 'vim-airline/vim-airline'
+    Plug 'rktjmp/lush.nvim'
+    Plug 'npxbr/gruvbox.nvim'
+    Plug 'ojroques/nvim-hardline'
     Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'} 
+    Plug 'kyazdani42/nvim-web-devicons' " for file icons
+    Plug 'kyazdani42/nvim-tree.lua'
     " Utilities
-    Plug 'preservim/nerdtree'
-    Plug 'ap/vim-css-color'
     Plug 'vimwiki/vimwiki'
 call plug#end()
 
