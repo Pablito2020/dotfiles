@@ -1,8 +1,7 @@
 local tree_cb = require'nvim-tree.config'.nvim_tree_callback
-
 vim.api.nvim_set_keymap(
     "n",
-    "<leader>",
+    "<C-n>",
     ":NvimTreeToggle<CR>",
     {
         noremap = true,
@@ -11,6 +10,9 @@ vim.api.nvim_set_keymap(
 )
 
 vim.g.nvim_tree_bindings = {
+  ["<leader> n"] = ":NvimTreeToogle()<cr>",
+  ["u"] = ":lua require'some_module'.some_function()<cr>",
+  --
   -- default mappings
   ["<CR>"]           = tree_cb("edit"),
   ["o"]              = tree_cb("edit"),
