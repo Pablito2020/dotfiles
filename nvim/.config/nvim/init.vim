@@ -8,7 +8,7 @@ source ~/.config/nvim/sets.vim
 source ~/.config/nvim/plugins.vim
 
 " colorscheme
-source ~/.config/nvim/plugins/colorscheme.vim
+luafile ~/.config/nvim/plugins/colorscheme.lua
 luafile ~/.config/nvim/plugins/bar.lua
 " make neovim like an IDE (autocomplete, syntax highlighting, git, etc)
 luafile ~/.config/nvim/plugins/lsp.lua

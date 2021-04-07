@@ -20,10 +20,9 @@ set noswapfile
 set undodir=~/.vim/undodir 
 set undofile
 set hidden
-"
+
 " Set completeopt to have a better completion experience lsp
 set completeopt=menuone,noinsert,noselect
-
 
 " tabs 
 set expandtab
@@ -35,8 +34,7 @@ set nowrap
 set ai "Auto indent
 
 
-" some remaps
-" leader key to space
+" Remaps
 let mapleader=" "
 
 " VIM movements enforcing
@@ -49,7 +47,7 @@ inoremap <Left> <Nop>
 nnoremap <Right> <Nop>
 inoremap <Right> <Nop>
 
-" Better for splits
+" better for splits
 nnoremap <leader>h :wincmd h<CR>
 nnoremap <leader>j :wincmd j<CR>
 nnoremap <leader>k :wincmd k<CR>
@@ -63,4 +61,7 @@ map <leader>c :w! \| !compiler <c-r>%<CR>
 " Open corresponding .pdf/.html or preview
 map <leader>p :!opout <c-r>%<CR><CR>
 
-
+" spell checker
+nnoremap <leader>ca :set spell! \| set spelllang=ca <CR>
+nnoremap <leader>es :set spell! \| set spelllang=es <CR>
+nnoremap <leader>ns :set nospell <CR>
