@@ -28,3 +28,4 @@ export LESS_TERMCAP_me=$(tput sgr0) # End bold, blinking, standout, underline
 
 HISTSIZE=5000
 HISTFILESIZE=10000
+source "$HOME/.cargo/env"

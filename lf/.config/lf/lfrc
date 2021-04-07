@@ -102,4 +102,8 @@ map gtr cd ~/.local/share/Trash/files
 map gv cd ~/Videos
 map gp cd ~/Pictures
 map gd cd ~/Downloads
+map gx cd ~/uni/xarxes
+map gar cd ~/uni/arquitectura
+map gal cd ~/uni/algoritmia
+map gal cd ~/uni/algoritmia
 map gc cd ~/dotfiles

@@ -20,6 +20,7 @@ export JAVA_HOME=/usr/lib/jvm/java-14-openjdk
 export PATH=$PATH:$JAVA_HOME/bin
 # add scripts to the path
 export PATH="$PATH:$HOME/.local/bin"
+export PATH="$PATH:$HOME/.cargo/bin"
 
 # Fix for dwm java apps 
 export _JAVA_AWT_WM_NONREPARENTING=1
