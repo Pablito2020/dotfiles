@@ -47,3 +47,5 @@ glp() {
 
 # Enable syntax highlighting (need to install the package first)
 source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh 2>/dev/null
+
+alias luamake=/home/pablito/lua-language-server/3rd/luamake/luamake

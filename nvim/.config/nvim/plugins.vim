@@ -5,7 +5,7 @@
 call plug#begin('~/.vim/autoload/')
     " lsp
     Plug 'neovim/nvim-lspconfig'
-    Plug 'nvim-lua/completion-nvim'
+    Plug 'hrsh7th/nvim-compe'
     " telescope 
     Plug 'nvim-lua/popup.nvim'
     Plug 'nvim-lua/plenary.nvim'

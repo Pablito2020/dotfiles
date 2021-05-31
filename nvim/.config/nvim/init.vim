@@ -12,6 +12,7 @@ luafile ~/.config/nvim/plugins/colorscheme.lua
 luafile ~/.config/nvim/plugins/bar.lua
 " make neovim like an IDE (autocomplete, syntax highlighting, git, etc)
 luafile ~/.config/nvim/plugins/lsp.lua
+luafile ~/.config/nvim/plugins/compe.lua
 luafile ~/.config/nvim/plugins/treesitter.lua
 luafile ~/.config/nvim/plugins/nvim-tree.lua
 luafile ~/.config/nvim/plugins/git.lua
