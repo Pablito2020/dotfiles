@@ -8,7 +8,7 @@
 # Global Variables
 export EDITOR="nvim"
 export VISUAL="nvim"
-export BROWSER="brave"
+export BROWSER="chromium"
 export TERMINAL="alacritty"
 export TERM="alacritty"
 export READER="zathura"

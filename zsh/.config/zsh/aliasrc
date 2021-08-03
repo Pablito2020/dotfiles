@@ -36,4 +36,6 @@ alias \
 alias \
     cheat="curl cht.sh/"
 
+alias \
+    mail="mbsync -a && neomutt"
 
