@@ -1,0 +1,40 @@
+#!/bin/bash
+
+delay=1
+playlist="Lofi Hip-Hop"
+path="/data/sync/uni/third/quatri-1"
+
+# check assignment
+assignment=$(ls $path | dmenu)
+
+if [ -z "$assignment" ]
+then
+    notify-send "didn't specify an assignment to work on 😥"
+    exit -1
+fi
+
+# Open browser with campus link and notion on workspace 1 and with profile "work"
+$BROWSER --profile-directory="Profile 1" https://cv.udl.cat &
+$BROWSER --profile-directory="Profile 1" https://www.notion.so/f19d402cd82b4303b6eae117d8ccf058?v=71fd976245dc4455bef8292aa6cd80a9 &
+sleep $delay
+xdotool key Super_L+Shift+1
+
+# Open mail client on workspace 8
+alacritty -e neomutt &
+sleep $delay
+xdotool key Super_L+Shift+8
+
+# Open spotify client with the playlist on workspace 9
+alacritty -e spt &
+sleep $delay
+xdotool key Super_L+Shift+9
+spt play --name "$playlist" --playlist --random
+
+# Open terminal with tmux client on workspace 2
+alacritty --working-directory $path"/"$assignment -e tmux &
+sleep $delay
+xdotool key Super_L+Shift+2
+
+# Finally, go to first workspace (browser) and notify it's done
+xdotool key Super_L+1 
+notify-send "setup for work complete! 🎉"

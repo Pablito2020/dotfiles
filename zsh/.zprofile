@@ -33,3 +33,7 @@ export LESS_TERMCAP_se=$(tput rmso; tput sgr0) # End standout
 export LESS_TERMCAP_us=$(tput smul; tput bold; tput setaf 1) # red, Start underline
 export LESS_TERMCAP_ue=$(tput sgr0) # End Underline
 export LESS_TERMCAP_me=$(tput sgr0) # End bold, blinking, standout, underline
+
+if [[ "$(tty)" = "/dev/tty1" ]]; then
+    pgrep dwm || startx
+fi
