@@ -23,7 +23,7 @@ Once you have stow installed, clone this repo and execute stow
         
         $ cd dotfiles
         
-        $ rm README.md && stow -vSt ~ * 
+        $ rm README.md && stow --adopt -vSt ~ *
 
 ### Applications configured
 
