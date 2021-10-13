@@ -1,14 +1,15 @@
 #!/bin/sh
 
 # Colorize commands when possible.
+# ls="ls -hN --color=auto --group-directories-first" \
 alias \
     cp="cp -iv" \
 	mv="mv -iv" \
 	rm="rm -vI" \
-	ls="ls -hN --color=auto --group-directories-first" \
+    ls="lsd -h" \
 	grep="grep --color=auto" \
 	diff="diff --color=auto" \
-	ccat="highlight --out-format=ansi"
+	cat="bat"
 
 
 # Git aliases

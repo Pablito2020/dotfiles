@@ -14,10 +14,12 @@ export TERM="alacritty"
 export READER="zathura"
 
 # Java ClassPath
-CLASSPATH=.:/home/pablito/projects/java/libraries/acm.jar
+CLASSPATH=.:/data/sync/uni/third/quatri-1/WordCountJava/guava-20.0-hal.jar
 export CLASSPATH
-export JAVA_HOME=/usr/lib/jvm/java-14-openjdk
-export PATH=$PATH:$JAVA_HOME/bin
+export JAVA_HOME=/usr/lib/jvm/java-11-openjdk/
+export JDTLS_HOME=/usr/share/java/jdtls
+export WORKSPACE=/data/sync/uni/third/quatri-1/concurrent-systems/WordCountJava/
+# export PATH=$PATH:$JAVA_HOME/bin
 # add scripts to the path
 export PATH="$PATH:$HOME/.local/bin"
 export PATH="$PATH:$HOME/.cargo/bin"

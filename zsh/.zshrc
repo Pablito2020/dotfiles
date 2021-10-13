@@ -49,3 +49,19 @@ glp() {
 source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh 2>/dev/null
 
 alias luamake=/home/pablito/lua-language-server/3rd/luamake/luamake
+
+# >>> conda initialize >>>
+# !! Contents within this block are managed by 'conda init' !!
+__conda_setup="$('/home/pablito/anaconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
+if [ $? -eq 0 ]; then
+    eval "$__conda_setup"
+else
+    if [ -f "/home/pablito/anaconda3/etc/profile.d/conda.sh" ]; then
+        . "/home/pablito/anaconda3/etc/profile.d/conda.sh"
+    else
+        export PATH="/home/pablito/anaconda3/bin:$PATH"
+    fi
+fi
+unset __conda_setup
+# <<< conda initialize <<<
+

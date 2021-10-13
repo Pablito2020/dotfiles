@@ -5,7 +5,10 @@
 call plug#begin('~/.vim/autoload/')
     " lsp
     Plug 'neovim/nvim-lspconfig'
+    Plug 'mfussenegger/nvim-jdtls'
     Plug 'hrsh7th/nvim-compe'
+    Plug 'RishabhRD/nvim-lsputils'
+    Plug 'RishabhRD/popfix' " to manage underlying popup and previews
     " telescope 
     Plug 'nvim-lua/popup.nvim'
     Plug 'nvim-lua/plenary.nvim'

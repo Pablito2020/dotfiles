@@ -19,3 +19,7 @@ luafile ~/.config/nvim/plugins/git.lua
 luafile ~/.config/nvim/plugins/telescope.lua
 " additions
 luafile ~/.config/nvim/plugins/vimwiki.lua
+ augroup lsp
+     au!
+     au FileType java lua require'jdtls_config'.setup()
+ augroup end
