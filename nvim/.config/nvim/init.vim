@@ -17,6 +17,7 @@ luafile ~/.config/nvim/plugins/treesitter.lua
 luafile ~/.config/nvim/plugins/nvim-tree.lua
 luafile ~/.config/nvim/plugins/git.lua
 luafile ~/.config/nvim/plugins/telescope.lua
+luafile ~/.config/nvim/plugins/lsputils.lua
 " additions
 luafile ~/.config/nvim/plugins/vimwiki.lua
  augroup lsp

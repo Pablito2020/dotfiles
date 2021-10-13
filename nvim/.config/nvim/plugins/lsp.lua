@@ -44,30 +44,3 @@ for _, lsp in ipairs(servers) do
     }
   }
 end
-
--- require'lspconfig'.jdtls.setup{}
---local config = {
---  -- The command that starts the language server
---  cmd = {
---    '/usr/lib/jvm/java-17-openjdk/bin/java',
---    '-Dosgi.bundles.defaultStartLevel=4',
---	"-Declipse.application=org.eclipse.jdt.ls.core.id1",
---	"-Dosgi.bundles.defaultStartLevel=4",
---	"-Declipse.product=org.eclipse.jdt.ls.core.product",
---	"-Dlog.level=ALL",
---	"-Xmx1G",
---	"-jar /usr/share/java/jdtls/plugins/org.eclipse.equinox.launcher_*.jar",
---	"-configuration /usr/share/java/jdtls/",
---	"-data $HOME/",
---	--add-modules=ALL-SYSTEM \
---	--add-opens java.base/java.util=ALL-UNNAMED \
---	--add-opens java.base/java.lang=ALL-UNNAMED
---    -- ADD REMAINING OPTIONS FROM https://github.com/eclipse/eclipse.jdt.ls#running-from-the-command-line !
---  },
-
---  -- This is the default if not provided, you can remove it. Or adjust as needed.
---  -- One dedicated LSP server & client will be started per unique root_dir
---  root_dir = require('jdtls.setup').find_root({'.git', 'mvnw', 'gradlew'})
---}
-
---require('jdtls').start_or_attach(config)
