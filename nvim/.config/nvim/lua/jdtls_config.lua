@@ -1,6 +1,7 @@
 local M = {}
 function M.setup()
-  require('jdtls').start_or_attach({cmd = {'launch_jdtls'}})
+  require('jdtls').start_or_attach({cmd = {'launch_jdtls'}, capabilities = require('cmp_nvim_lsp').update_capabilities(vim.lsp.protocol.make_client_capabilities())
+})
   -- Utility servers
   local map = function(type, key, value)
     vim.api.nvim_buf_set_keymap(0,type,key,value,{noremap = true, silent = true});

@@ -10,6 +10,8 @@ call plug#begin('~/.vim/autoload/')
     Plug 'hrsh7th/cmp-nvim-lsp'
     Plug 'hrsh7th/cmp-buffer'
     Plug 'hrsh7th/nvim-cmp'
+    Plug 'saadparwaiz1/cmp_luasnip'
+    Plug 'L3MON4D3/LuaSnip'
     " improve completion
     Plug 'RishabhRD/nvim-lsputils'
     Plug 'RishabhRD/popfix' " to manage underlying popup and previews
