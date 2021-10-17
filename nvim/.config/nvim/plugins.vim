@@ -3,10 +3,14 @@
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 call plug#begin('~/.vim/autoload/')
-    " lsp
+    " lsp config and servers
     Plug 'neovim/nvim-lspconfig'
     Plug 'mfussenegger/nvim-jdtls'
-    Plug 'hrsh7th/nvim-compe'
+    " completion
+    Plug 'hrsh7th/cmp-nvim-lsp'
+    Plug 'hrsh7th/cmp-buffer'
+    Plug 'hrsh7th/nvim-cmp'
+    " improve completion
     Plug 'RishabhRD/nvim-lsputils'
     Plug 'RishabhRD/popfix' " to manage underlying popup and previews
     " telescope 

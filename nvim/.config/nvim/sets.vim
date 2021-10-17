@@ -22,7 +22,7 @@ set undofile
 set hidden
 
 " Set completeopt to have a better completion experience lsp
-" set completeopt=menuone,noinsert,noselect
+set completeopt=menuone,noinsert,noselect
 
 " tabs 
 set expandtab
