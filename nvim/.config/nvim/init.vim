@@ -17,6 +17,7 @@ lua require'nvim-tree'.setup()
 luafile ~/.config/nvim/plugins/nvim-tree.lua
 luafile ~/.config/nvim/plugins/git.lua
 luafile ~/.config/nvim/plugins/telescope.lua
+lua require('nvim-autopairs').setup{}
 " luafile ~/.config/nvim/plugins/lsputils.lua -- currently broken because of lsp update
 " personal wiki
 luafile ~/.config/nvim/plugins/vimwiki.lua

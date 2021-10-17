@@ -15,6 +15,7 @@ call plug#begin('~/.vim/autoload/')
     " improve completion
     Plug 'RishabhRD/nvim-lsputils'
     Plug 'RishabhRD/popfix' " to manage underlying popup and previews
+    Plug 'windwp/nvim-autopairs'
     " telescope 
     Plug 'nvim-lua/popup.nvim'
     Plug 'nvim-lua/plenary.nvim'
