@@ -65,3 +65,24 @@ map <leader>p :!opout <c-r>%<CR><CR>
 nnoremap <leader>ca :set spell! \| set spelllang=ca <CR>
 nnoremap <leader>es :set spell! \| set spelllang=es <CR>
 nnoremap <leader>ns :set nospell <CR>
+
+" lsp remaps
+nnoremap <silent>gd <cmd> lua vim.lsp.buf.definition()<CR>
+nnoremap <silent>gD <cmd> lua vim.lsp.buf.declaration()<CR>
+nnoremap <silent>gi <cmd> lua vim.lsp.buf.implementation()<CR>
+nnoremap <silent>gr <cmd> lua vim.lsp.buf.references()<CR>
+nnoremap <silent><leader>f <cmd> lua vim.lsp.buf.formatting()<CR>
+" lspsaga remaps
+" code actions
+nnoremap <silent><leader>ca <cmd>lua require('lspsaga.codeaction').code_action()<CR>
+vnoremap <silent><leader>ca :<C-U>lua require('lspsaga.codeaction').range_code_action()<CR>
+" show type
+nnoremap <silent><leader>st <cmd>lua require('lspsaga.hover').render_hover_doc()<CR>
+" show definition 
+nnoremap <silent><leader>sd <cmd>lua require'lspsaga.provider'.preview_definition()<CR>
+" rename
+nnoremap <silent><leader>rn <cmd>lua require('lspsaga.rename').rename()<CR>
+" show error, go to next error and previous
+nnoremap <silent> <leader>se :Lspsaga show_line_diagnostics<CR>
+nnoremap <silent><leader>pe <cmd>lua require'lspsaga.diagnostic'.lsp_jump_diagnostic_prev()<CR>
+nnoremap <silent><leader>ne <cmd>lua require'lspsaga.diagnostic'.lsp_jump_diagnostic_next()<CR>
