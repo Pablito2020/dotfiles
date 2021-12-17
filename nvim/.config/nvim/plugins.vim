@@ -10,8 +10,10 @@ call plug#begin('~/.vim/autoload/')
     Plug 'hrsh7th/cmp-nvim-lsp'
     Plug 'hrsh7th/cmp-buffer'
     Plug 'hrsh7th/nvim-cmp'
-    " snippets
+    Plug 'hrsh7th/cmp-path'
+    Plug 'hrsh7th/cmp-nvim-lua'
     Plug 'saadparwaiz1/cmp_luasnip'
+    " snippets
     Plug 'L3MON4D3/LuaSnip'
     " Tree project
     Plug 'kyazdani42/nvim-tree.lua'
@@ -30,10 +32,12 @@ call plug#begin('~/.vim/autoload/')
     " Colorscheme and syntax highlighting
     Plug 'rktjmp/lush.nvim'
     Plug 'npxbr/gruvbox.nvim' " requires lush
+    Plug 'LunarVim/onedarker.nvim'
     Plug 'ojroques/nvim-hardline'
     Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'} 
     Plug 'kyazdani42/nvim-web-devicons' " for file icons
     Plug 'lewis6991/gitsigns.nvim' " require plenary
+    Plug 'lukas-reineke/indent-blankline.nvim'
     " Utilities
     Plug 'vimwiki/vimwiki'
 call plug#end()

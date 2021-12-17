@@ -62,7 +62,7 @@ map <leader>c :w! \| !compiler <c-r>%<CR>
 map <leader>p :!opout <c-r>%<CR><CR>
 
 " spell checker
-nnoremap <leader>ca :set spell! \| set spelllang=ca <CR>
+nnoremap <leader>cat :set spell! \| set spelllang=ca <CR>
 nnoremap <leader>es :set spell! \| set spelllang=es <CR>
 nnoremap <leader>ns :set nospell <CR>
 
