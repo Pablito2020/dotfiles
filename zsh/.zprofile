@@ -16,7 +16,7 @@ export READER="zathura"
 # Java ClassPath
 CLASSPATH=.:/data/sync/uni/third/quatri-1/WordCountJava/guava-20.0-hal.jar
 export CLASSPATH
-export JAVA_HOME=/usr/lib/jvm/java-11-openjdk/
+export JAVA_HOME=/usr/lib/jvm/java-17-openjdk/
 export JDTLS_HOME=/usr/share/java/jdtls
 export WORKSPACE=/data/sync/uni/third/quatri-1/concurrent-systems/WordCountJava/
 # export PATH=$PATH:$JAVA_HOME/bin
