@@ -20,9 +20,17 @@ HISTFILE=$HOME/.cache/zsh/history
 source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
 bindkey '^ ' autosuggest-accept
 
+# prompt
+autoload -Uz vcs_info # enable vcs_info
+precmd () { 
+    vcs_info 
+    zstyle ':vcs_info:*' formats ' %s(%F{red}%b%f)' # git(main)
+    # PS1="%n %F{red}%/%f${vcs_info_msg_0_} % > "
+    PS1="%B%{$fg[red]%}[%{$fg[yellow]%}%n%{$fg[green]%}@%{$fg[blue]%}%M %{$fg[magenta]%}%~%{$fg[red]%}]%{$reset_color%}${vcs_info_msg_0_}%b "
+} # always load before displaying the prompt
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
-source ~/.config/zsh/themes/p10k/powerlevel10k.zsh-theme
-[[ ! -f ~/.config/zsh/.p10k.zsh ]] || source ~/.config/zsh/.p10k.zsh
+# source ~/.config/zsh/themes/p10k/powerlevel10k.zsh-theme
+# [[ ! -f ~/.config/zsh/.p10k.zsh ]] || source ~/.config/zsh/.p10k.zsh
 
 # Show colors at startup!
 ~/.config/zsh/colorscripts/random.sh
@@ -50,21 +58,6 @@ source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zs
 
 alias luamake=/home/pablito/lua-language-server/3rd/luamake/luamake
 
-# >>> conda initialize >>>
-# !! Contents within this block are managed by 'conda init' !!
-# __conda_setup="$('/home/pablito/anaconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
-# if [ $? -eq 0 ]; then
-#     eval "$__conda_setup"
-# else
-#     if [ -f "/home/pablito/anaconda3/etc/profile.d/conda.sh" ]; then
-#         . "/home/pablito/anaconda3/etc/profile.d/conda.sh"
-#     else
-#         export PATH="/home/pablito/anaconda3/bin:$PATH"
-#     fi
-# fi
-# unset __conda_setup
-# # <<< conda initialize <<<
-#
 if command -v theme.sh > /dev/null; then
 	[ -e ~/.theme_history ] && theme.sh "$(theme.sh -l|tail -n1)"
 	# Optional
@@ -74,4 +67,3 @@ if command -v theme.sh > /dev/null; then
 	# Interactively load a dark theme
 	alias thd='theme.sh --dark -i'
 fi
-

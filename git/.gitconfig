@@ -1,6 +1,7 @@
 [user]
 	email = pablofrailealonso@gmail.com
 	name = Pablo Fraile Alonso
+	signingkey = C80636680A071CC8465F6DF88F3E625DEEFDA6A8
 [color]
 	ui = auto
 [color "branch"]
@@ -11,3 +12,9 @@
 	added = green bold
 	changed = yellow bold
 	untracked = red bold
+
+[commit]
+    gpgSign = true
+
+[tag]
+    gpgSign = true

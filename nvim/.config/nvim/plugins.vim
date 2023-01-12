@@ -13,6 +13,10 @@ call plug#begin('~/.vim/autoload/')
     Plug 'hrsh7th/cmp-path'
     Plug 'hrsh7th/cmp-nvim-lua'
     Plug 'saadparwaiz1/cmp_luasnip'
+    " Testing
+    Plug 'neomake/neomake'
+    Plug 'janko-m/vim-test'
+    Plug 'kassio/neoterm'
     " snippets
     Plug 'L3MON4D3/LuaSnip'
     " Tree project
@@ -38,7 +42,5 @@ call plug#begin('~/.vim/autoload/')
     Plug 'kyazdani42/nvim-web-devicons' " for file icons
     Plug 'lewis6991/gitsigns.nvim' " require plenary
     Plug 'lukas-reineke/indent-blankline.nvim'
-    " Utilities
-    Plug 'vimwiki/vimwiki'
 call plug#end()
 

@@ -8,21 +8,19 @@
 # Global Variables
 export EDITOR="nvim"
 export VISUAL="nvim"
-export BROWSER="chromium"
+export BROWSER="firefox"
 export TERMINAL="alacritty"
 export TERM="alacritty"
 export READER="zathura"
 
 # Java ClassPath
-CLASSPATH=.:/data/sync/uni/third/quatri-1/WordCountJava/guava-20.0-hal.jar
-export CLASSPATH
-export JAVA_HOME=/usr/lib/jvm/java-17-openjdk/
+export JAVA_HOME=/usr/lib/jvm/java-19-openjdk/
 export JDTLS_HOME=/usr/share/java/jdtls
-export WORKSPACE=/data/sync/uni/third/quatri-1/concurrent-systems/WordCountJava/
-# export PATH=$PATH:$JAVA_HOME/bin
 # add scripts to the path
 export PATH="$PATH:$HOME/.local/bin"
+# necessary for rustup and lsd, etc
 export PATH="$PATH:$HOME/.cargo/bin"
+export PATH="$PATH:/root/.local/share/gem/ruby/3.0.0/bin"
 
 # Fix for dwm java apps 
 export _JAVA_AWT_WM_NONREPARENTING=1

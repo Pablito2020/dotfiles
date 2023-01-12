@@ -4,6 +4,7 @@ set hidden true
 set color256 true
 set drawbox true
 set icons true
+set previewer ~/.local/bin/previewer.sh
 set ignorecase true
 set relativenumber true
 
@@ -99,11 +100,5 @@ map U unselect
 
 # Movement
 map gtr cd ~/.local/share/Trash/files
-map gv cd ~/Videos
 map gp cd ~/Pictures
-map gd cd ~/Downloads
-map gx cd ~/uni/xarxes
-map gar cd ~/uni/arquitectura
-map gal cd ~/uni/algoritmia
-map gal cd ~/uni/algoritmia
-map gc cd ~/dotfiles
+map gc cd ~/.dotfiles
